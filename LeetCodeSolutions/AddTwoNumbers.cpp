@@ -5,8 +5,8 @@ public:
         ListNode* h = NULL, ** t = &h;
 
         while (l1 != NULL || l2 != NULL) {
-            x = getValueAndMoveNext(l1);
-            y = getValueAndMoveNext(l2);
+            x = gvmn(l1);
+            y = gvmn(l2);
 
             summ = cr + x + y;
 
@@ -25,7 +25,7 @@ public:
         return h;
     }
 private:
-    int getValueAndMoveNext(ListNode*& l) {
+    int gvmn(ListNode*& l) {
         int x = 0;
         if (l != NULL) {
             x = l->val;
